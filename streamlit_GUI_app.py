@@ -34,7 +34,7 @@ def plot_raw_data(data: DataFrame, selected_stock: str) -> None:
     )
     st.plotly_chart(fig)
     
-def main():
+    def main():
 
     st.set_page_config(
         page_title="Stock Prediction App",
