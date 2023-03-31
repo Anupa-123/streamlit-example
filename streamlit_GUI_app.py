@@ -1,17 +1,15 @@
-import sys
-sys.path
-['', '/usr/local/lib/python35.zip', ...,
-'~/envs/tutorial-env/lib/python3.5/site-packages']
-
 import streamlit as st
 import yfinance as yf
+
 from datetime import date
 from prophet import Prophet
 from prophet.plot import plot_plotly
 from plotly import graph_objs as go
 from pandas import DataFrame
+
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
+
 @st.cache
 def load_data(ticker: str) -> DataFrame:
     data = yf.download(ticker, START, TODAY)
@@ -69,8 +67,8 @@ def main():
 
     training_data = data[["Date", "Close"]]
 
-#https://facebook.github.io/prophet/docs/quick_start.html#python-api
-# the input to prophet is always a dataframe with two columns: ds and y
+    # https://facebook.github.io/prophet/docs/quick_start.html#python-api
+    # the input to prophet is always a dataframe with two columns: ds and y
     training_data.rename(columns={
         "Date": "ds", "Close": "y"
     }, inplace=True)
@@ -83,7 +81,7 @@ def main():
 
     st.subheader("Predictions")
 
-# st.write(predictions.tail())
+    # st.write(predictions.tail())
 
     fig1 = plot_plotly(model, predictions)
 
@@ -92,7 +90,7 @@ def main():
         xaxis_title_text="Time Stamp",
         yaxis_title_text="Price (USD)",
         showlegend=True
-     )
+    )
 
     fig1_data = fig1.to_dict()
 
@@ -103,12 +101,11 @@ def main():
 
     st.plotly_chart(fig1_data)
 
-# st.subheader("Prediction Components")
+    # st.subheader("Prediction Components")
     # fig2 = model.plot_components(predictions)
     # st.write(fig2)
-    if __name__ == "__main__":
 
-       main()
+if __name__ == "__main__":
 
-
+    main()
 
