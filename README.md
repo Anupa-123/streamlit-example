@@ -1,6 +1,34 @@
 # Welcome to Streamlit!
+<h1 align="center">Stock Predictions App</h1>
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire. :heart:
+<p align="center">using Python and <a href="https://streamlit.io/">Streamlit</a></p>
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+<p align="center"> <img src="./screenshot-1.png"> </p>
+
+<!-- 
+## Setup
+
+- Create Virtual Enviroment
+```sh
+python -m venv venv
+```
+-->
+<!-- 
+- Upgrade `pip`
+```sh
+python -m pip install --upgrade pip
+```
+-->
+<!-- 
+- Install Required Packages/Modules
+```sh
+python -m pip install streamlit prophet yfinance plotly
+```
+-->
+<!--
+## Run
+
+```sh
+python -m streamlit run main.py
+```
+-->
