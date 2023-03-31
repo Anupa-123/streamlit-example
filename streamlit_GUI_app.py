@@ -1,4 +1,3 @@
-@echo off
 
 python -m streamlit run main.py --logger.enableRich=true --server.headless=true --server.runOnSave=true --theme.base=dark --theme.font=monospace
 
