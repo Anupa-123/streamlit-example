@@ -2,6 +2,8 @@ import sys
 sys.path
 ['', '/usr/local/lib/python35.zip', ...,
 '~/envs/tutorial-env/lib/python3.5/site-packages']
+pip install streamlit
+pip install yfinance
 import streamlit as st
 import yfinance as yf
 from datetime import date
@@ -33,8 +35,8 @@ def plot_raw_data(data: DataFrame, selected_stock: str) -> None:
         height=500, width=800
     )
     st.plotly_chart(fig)
-    
-    def main():
+
+def main():
 
     st.set_page_config(
         page_title="Stock Prediction App",
@@ -108,7 +110,6 @@ def plot_raw_data(data: DataFrame, selected_stock: str) -> None:
     if __name__ == "__main__":
 
        main()
-
 
 
 
