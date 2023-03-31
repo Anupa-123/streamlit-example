@@ -1,7 +1,6 @@
 import streamlit as st
 import yfinance as yf
 
-pip install streamlit
 pip install yfinance
 
 from datetime import date
