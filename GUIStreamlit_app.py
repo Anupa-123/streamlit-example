@@ -7,7 +7,7 @@ def greet(name):
 # Create a Streamlit app
 def app():
     # Add a title to the app
-    st.title("Greeting App")
+    st.title("Algo_Trading App")
 
     # Ask the user for their name
     name = st.text_input("Enter your name:")
