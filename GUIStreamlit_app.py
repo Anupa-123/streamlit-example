@@ -2,7 +2,7 @@ import streamlit as st
 
 # Define a function that takes a name and returns a greeting
 def greet(name):
-    return f"Welcome, {AlgorithmicTradingWorld}!"
+    return f"Welcome, {name}!"
 
 # Create a Streamlit app
 def app():
